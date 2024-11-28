@@ -1,0 +1,12 @@
+<div class="user-orders-wrapper">   
+    <div class="user-selection">
+      @for (user of allUsers(); track user.id) {
+        <button 
+          (click)="selectUser(user.id)"
+          [class.active]="viewModel().user?.id === user.id"
+        >
+          {{ user.name}}
+        </button>
+      } 
+    </div>
+  </div>
